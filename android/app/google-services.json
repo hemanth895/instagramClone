@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1049980279113",
+    "project_id": "instantgram-clone-riverpod",
+    "storage_bucket": "instantgram-clone-riverpod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049980279113:android:1ed5e8d2d97480944f2298",
+        "android_client_info": {
+          "package_name": "com.example.instant_gram"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXllpKwI7xwo_SI1GJDyueZKD_DXbT9QI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
