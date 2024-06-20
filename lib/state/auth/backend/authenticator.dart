@@ -6,6 +6,8 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 
 class Authenticator {
+
+  
   const Authenticator();
 
   UserId? get userId => FirebaseAuth.instance.currentUser?.uid;
@@ -21,15 +23,22 @@ class Authenticator {
   }
 
   Future<AuthResult> loginWithFacebook() async {
+
+    //facebook login dialog will appear 
     final loginResult = await FacebookAuth.instance.login();
-    final token = loginResult.accessToken?.token;
+
+    //get the access toekn from the loginResult 
+    final token = loginResult.accessToken?.tokenString;
 
     if (token == null) {
       //aborted facebook login
       return AuthResult.aborted;
     }
 
+    //get the credentials from the token on successfull login
+    //face book actually doesnot maintain any state related to app but it just provides the oAuthCredentials needed for firebase login living the trace that the credentials are gathered from the facebook account
     final oauthCredentials = FacebookAuthProvider.credential(token);
+
     try {
       await FirebaseAuth.instance.signInWithCredential(
         oauthCredentials,
@@ -85,3 +94,6 @@ class Authenticator {
     }
   }
 }
+
+
+

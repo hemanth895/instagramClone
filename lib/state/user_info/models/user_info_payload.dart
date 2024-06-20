@@ -1,5 +1,5 @@
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:instant_gram/state/constants/firbase_field_name.dart';
+import 'package:instant_gram/state/constants/firebase_field_name.dart';
 import 'dart:collection' show MapView;
 
 import 'package:instant_gram/state/posts/typedefs/user_id.dart';

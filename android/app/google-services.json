@@ -12,7 +12,20 @@
           "package_name": "com.example.instant_gram"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1049980279113-natndhs2vfrm9vq5dvjtru36agcv106r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.instant_gram",
+            "certificate_hash": "8d8c16682fa48d8187a303b2f5a577967f0fb65a"
+          }
+        },
+        {
+          "client_id": "1049980279113-ttu2d8e49hrnj54d8fqho9pbcroul8n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAXllpKwI7xwo_SI1GJDyueZKD_DXbT9QI"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049980279113-ttu2d8e49hrnj54d8fqho9pbcroul8n4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1049980279113-mugpjqq8d42kmqtr6irccsvhieag7c73.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.instantGram.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }

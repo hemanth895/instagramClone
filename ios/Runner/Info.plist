@@ -3,30 +3,50 @@
 <plist version="1.0">
 <dict>
 
-<key>CFBundleURLTypes</key>
-<array>
-  <dict>
-    <key>CFBundleTypeRole</key>
-		<string>Editor</string>
-    <key>CFBundleURLSchemes</key>
-    <array>
-      <string>fb956918342728116</string>
-	  <string>com.googleusercontent.apps.1049980279113-rkqnvbnb5a5b0f7puqteb8c8idl2uoup</string>
 
-    </array>
-  </dict>
-</array>
-<key>FacebookAppID</key>
-<string>956918342728116</string>
-<key>FacebookClientToken</key>
-<string>CLIENT-TOKEN</string>
-<key>6efd546c7e5f5656f82c4e375d2adca0</key>
-<string>Image Sharing Flutter</string>
-<key>LSApplicationQueriesSchemes</key>
-<array>
-  <string>fbapi</string>
-  <string>fb-messenger-share-api</string>
-</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fbapi20130214</string>
+		<string>fbapi20130410</string>
+		<string>fbapi20130702</string>
+		<string>fbapi20131010</string>
+		<string>fbapi20131219</string>
+		<string>fbapi20140410</string>
+		<string>fbapi20140116</string>
+		<string>fbapi20150313</string>
+		<string>fbapi20150629</string>
+		<string>fbapi20160328</string>
+		<string>fbauth</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
+
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb956918342728116</string>
+	            <string>com.googleusercontent.apps.1049980279113-rkqnvbnb5a5b0f7puqteb8c8idl2uoup</string>
+			</array>
+		</dict>
+	</array>
+
+	<key>FacebookAppID</key>
+	<string>956918342728116</string>
+	<key>FacebookClientToken</key>
+	<string>6efd546c7e5f5656f82c4e375d2adca0</string>
+	<key>FacebookDisplayName</key>
+	<string>image_sharing_flutter</string>
+
+	<key>GIDClientID</key>
+    <string>1049980279113-rkqnvbnb5a5b0f7puqteb8c8idl2uoup.apps.googleusercontent.com</string>
+
+
 
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

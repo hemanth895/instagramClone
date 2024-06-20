@@ -1,8 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:instant_gram/main.dart';
 import 'package:instant_gram/views/components/constants/strings.dart';
 import 'package:instant_gram/views/components/loading/loading_screen_controller.dart';
+import 'dart:developer' show log;
 
 class LoadingScreen {
   LoadingScreen._sharedInstance();
@@ -45,6 +47,8 @@ class LoadingScreen {
 
     final renderBox = context.findRenderObject() as RenderBox;
     final size = renderBox.size;
+
+    size.log();
 
     final overlay = OverlayEntry(
       builder: (context) {

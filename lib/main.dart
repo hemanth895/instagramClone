@@ -5,6 +5,7 @@ import 'package:instant_gram/firebase_options.dart';
 import 'dart:developer' as devtools show log;
 import 'package:instant_gram/state/auth/providers/auth_state_provider.dart';
 import 'package:instant_gram/state/auth/providers/is_loggedin_provider.dart';
+import 'package:instant_gram/views/components/loading/loading_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -108,12 +109,3 @@ class LoginView extends ConsumerWidget {
     );
   }
 }
-
-
-
-//web       1:1049980279113:web:851ccf7f6288c2e44f2298
-// android   1:1049980279113:android:1ed5e8d2d97480944f2298
-// // ios       1:1049980279113:ios:933e02c714c3f87a4f2298
-// // macos     1:1049980279113:ios:c0e3fce5b6f90fc34f2298
-
-//6efd546c7e5f5656f82c4e375d2adca0

@@ -1,4 +1,9 @@
 {
     "cmake.sourceDirectory": "C:/Users/HEMAN/Desktop/instant_gram/linux",
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    }
 }
