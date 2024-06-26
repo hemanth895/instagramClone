@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:instant_gram/views/components/search_grid_view.dart';
 import 'package:instant_gram/views/constants/strings.dart';
 import 'package:instant_gram/views/extensions/dismiss_keyboard.dart';
 
@@ -42,9 +43,9 @@ class SearchView extends HookConsumerWidget {
             ),
           ),
         ),
-        //SearchGridView(
-        //  searchTerm: searchTerm.value,
-        //),
+        SearchGridView(
+          searchTerm: searchTerm.value,
+        ),
       ],
     );
   }
