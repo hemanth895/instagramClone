@@ -3,9 +3,11 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:instant_gram/firebase_options.dart';
 import 'dart:developer' as devtools show log;
-import 'package:instant_gram/state/auth/providers/auth_state_provider.dart';
 import 'package:instant_gram/state/auth/providers/is_loggedin_provider.dart';
+import 'package:instant_gram/state/providers/is_loading_provider.dart';
 import 'package:instant_gram/views/components/loading/loading_screen.dart';
+import 'package:instant_gram/views/login/login_view.dart';
+import 'package:instant_gram/views/main/main_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,6 +44,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Consumer(
         builder: (context, ref, child) {
+          ref.listen<bool>(isLoadingProvider, (_, isLoading) {
+            if (isLoading) {
+              LoadingScreen.instance().show(context: context);
+            } else {
+              LoadingScreen.instance().hide();
+            }
+          });
           final isLoggedIn = ref.watch(isLoggedInProvider);
           if (isLoggedIn) {
             return const MainView();
@@ -53,59 +62,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MainView extends StatelessWidget {
-  const MainView({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Main View'),
-      ),
-      body: Consumer(
-        builder: (_, ref, child) {
-          return TextButton(
-            onPressed: () async {
-              await ref.read(authStateProvider.notifier).logOut();
-            },
-            child: const Text('Logout'),
-          );
-        },
-      ),
-    );
-  }
-}
 
 extension Log on Object {
   void log() => devtools.log(toString());
-}
-
-class LoginView extends ConsumerWidget {
-  const LoginView({super.key});
-
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Login View'),
-      ),
-      body: Column(
-        children: [
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithGoogle,
-            child: const Text(
-              'Sign In With Google',
-            ),
-          ),
-          TextButton(
-            onPressed: ref.read(authStateProvider.notifier).loginWithFacebook,
-            child: const Text(
-              'Sign In With Facebook',
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 }

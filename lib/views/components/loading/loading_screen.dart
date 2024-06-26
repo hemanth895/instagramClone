@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:instant_gram/main.dart';
-import 'package:instant_gram/views/components/constants/strings.dart';
+import 'package:instant_gram/views/constants/strings.dart';
 import 'package:instant_gram/views/components/loading/loading_screen_controller.dart';
 import 'dart:developer' show log;
 
